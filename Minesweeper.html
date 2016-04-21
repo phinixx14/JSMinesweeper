@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Minesweeper</title>
+	<script src="Minesweeper.js"></script>
+	<link rel="stylesheet" type="text/css" href="Minesweeper.css">
+</head>
+<body onload="showNewGamePrompt()">
+	<table id="gameBoard">
+	</table>
+	<p>Wins: <span id="wins">0</span></p>
+	<p>Losses: <span id="losses">0</span></p>
+	<br />
+	<button onclick="showNewGamePrompt()">New Game</button>
+	
+	<!--dialog boxes-->
+	
+	<!--New Game-->
+	<div id="newGame" class="modalDialog">
+	<div>
+		<table>
+		<tr><td>Board Width:</td><td><input id="width" type="textbox" /></td></tr>
+		<tr><td>Board Height:</td><td><input id="height" type="textbox" /></td></tr>
+		<tr><td>Number of Mines:</td><td><input id="mines" type="textbox" /></td></tr>
+		</table>
+		<a class="okay" href="#" title="Okay" onclick="newGame()">Okay</a>
+	</div>
+	</div>
+	
+	<!--Win-->
+	<div id="win" class="modalDialog">
+		<div>
+			You win! <br /><br />
+			<a class="okay" href="#" title="New Game" onclick="newGame()">New Game</a>
+		</div>
+	</div>
+	
+	<!--Lose-->
+	<div id="lose" class="modalDialog">
+		<div>
+			You lose! <br /><br />
+			<a class="okay" href="#" title="New Game" onclick="newGame()">New Game</a>
+		</div>
+	</div>
+</body>
+</html>
